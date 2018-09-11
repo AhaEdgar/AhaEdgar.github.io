@@ -4,15 +4,40 @@
 
     
   <url>
-    <loc>http://ahaedgar.github.io/2018/08/19/image-test/</loc>
-    <lastmod>2018-08-20T13:55:32.800Z</lastmod>
+    <loc>http://ahaedgar.github.io/2018/09/11/EdgeX-02-ConfigurationAndRegistry/</loc>
+    <lastmod>2018-09-11T14:04:54.406Z</lastmod>
     <data>
         <display>
-        <title>image_test</title>
-        <pubTime>2018-08-19T13:37:34.000Z</pubTime>
+        <title>核心微服务-Configuration and Registry</title>
+        <pubTime>2018-09-11T13:25:25.000Z</pubTime>
         
+        <tag>EdgeX Foundry</tag>
+         
          
            
+             
+              <breadCrumb title="Edge Computing" url="http://ahaedgar.github.io/categories/Edge-Computing/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ahaedgar.github.io/2018/09/11/EdgeX-01-Introduction/</loc>
+    <lastmod>2018-09-11T14:02:19.446Z</lastmod>
+    <data>
+        <display>
+        <title>EdgeX Foundry - Introduction</title>
+        <pubTime>2018-09-11T12:11:25.000Z</pubTime>
+        
+        <tag>EdgeX Foundry</tag>
+         
+         
+           
+             
+              <breadCrumb title="Edge Computing" url="http://ahaedgar.github.io/categories/Edge-Computing/"/>
+          
         </display>
     </data>
     </url>

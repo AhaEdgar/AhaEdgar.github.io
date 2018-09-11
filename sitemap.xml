@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ahaedgar.github.io/2018/08/19/image-test/</loc>
+    <loc>http://ahaedgar.github.io/2018/09/11/EdgeX-02-ConfigurationAndRegistry/</loc>
     
-    <lastmod>2018-08-20T13:55:32.800Z</lastmod>
+    <lastmod>2018-09-11T14:04:54.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ahaedgar.github.io/2018/09/11/EdgeX-01-Introduction/</loc>
+    
+    <lastmod>2018-09-11T14:02:19.446Z</lastmod>
     
   </url>
   

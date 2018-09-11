@@ -1125,7 +1125,7 @@ pre .javascript .function {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: normal;
   font-family: 'Hevetica Neue', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -1827,7 +1827,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #285c95;
+  background: #42ff9c;
 }
 .links-of-blogroll {
   font-size: 13px;
