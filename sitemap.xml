@@ -2,16 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ahaedgar.github.io/2018/09/11/EdgeX-02-ConfigurationAndRegistry/</loc>
+    <loc>http://ahaedgar.github.io/2018/09/12/SupportingServices-AlertsAndNotifications/</loc>
     
-    <lastmod>2018-09-11T14:04:54.406Z</lastmod>
+    <lastmod>2018-09-12T11:19:17.027Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ahaedgar.github.io/2018/09/11/EdgeX-01-Introduction/</loc>
+    <loc>http://ahaedgar.github.io/2018/09/12/SupportingServices-RulesEngine/</loc>
     
-    <lastmod>2018-09-11T14:02:19.446Z</lastmod>
+    <lastmod>2018-09-12T11:13:43.324Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ahaedgar.github.io/2018/09/12/SupportingServices-Scheduling/</loc>
+    
+    <lastmod>2018-09-12T11:08:27.320Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ahaedgar.github.io/2018/09/12/SupportingServices-Logging/</loc>
+    
+    <lastmod>2018-09-12T11:05:51.030Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ahaedgar.github.io/2018/09/12/CoreServices-Command/</loc>
+    
+    <lastmod>2018-09-12T10:54:42.111Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ahaedgar.github.io/2018/09/12/CoreServices-Metadata/</loc>
+    
+    <lastmod>2018-09-12T10:51:25.862Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ahaedgar.github.io/2018/09/12/CoreServices-CoreData/</loc>
+    
+    <lastmod>2018-09-12T10:36:48.028Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ahaedgar.github.io/2018/09/11/CoreServicesLayer-ConfigurationAndRegistry/</loc>
+    
+    <lastmod>2018-09-12T10:34:50.143Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ahaedgar.github.io/2018/09/11/EdgeX-Introduction/</loc>
+    
+    <lastmod>2018-09-12T10:32:33.868Z</lastmod>
     
   </url>
   

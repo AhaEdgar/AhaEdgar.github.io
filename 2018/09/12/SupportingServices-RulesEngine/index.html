@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="Px98FfhCG6kd9q5kFwMalmY7BAKK8o8MG149eUmVzjk" />
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="quwsiTxRql" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Hevetica Neue:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/touxiang.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/touxiang.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/touxiang.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/touxiang.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="EdgeX Foundry," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="SupportingServices - RulesEngine：   Refrence Implementation  Rules Engine as Export Service Client  Rules Engine Direct Connect to Core Data  Rules Client and High Level Interaction Diagram  Rules (De">
+<meta name="keywords" content="EdgeX Foundry">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SupportingServices - RulesEngine">
+<meta property="og:url" content="http://ahaedgar.github.io/2018/09/12/SupportingServices-RulesEngine/index.html">
+<meta property="og:site_name" content="One Corner of The Universe">
+<meta property="og:description" content="SupportingServices - RulesEngine：   Refrence Implementation  Rules Engine as Export Service Client  Rules Engine Direct Connect to Core Data  Rules Client and High Level Interaction Diagram  Rules (De">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ahaedgar.github.io/2018/09/12/SupportingServices-RulesEngine/1.png">
+<meta property="og:image" content="http://ahaedgar.github.io/2018/09/12/SupportingServices-RulesEngine/2.png">
+<meta property="og:image" content="http://ahaedgar.github.io/2018/09/12/SupportingServices-RulesEngine/3.png">
+<meta property="og:image" content="http://ahaedgar.github.io/2018/09/12/SupportingServices-RulesEngine/4.png">
+<meta property="og:image" content="http://ahaedgar.github.io/2018/09/12/SupportingServices-RulesEngine/5.png">
+<meta property="og:image" content="http://ahaedgar.github.io/2018/09/12/SupportingServices-RulesEngine/table-1.png">
+<meta property="og:updated_time" content="2018-09-12T11:13:43.324Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SupportingServices - RulesEngine">
+<meta name="twitter:description" content="SupportingServices - RulesEngine：   Refrence Implementation  Rules Engine as Export Service Client  Rules Engine Direct Connect to Core Data  Rules Client and High Level Interaction Diagram  Rules (De">
+<meta name="twitter:image" content="http://ahaedgar.github.io/2018/09/12/SupportingServices-RulesEngine/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Edgar'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ahaedgar.github.io/2018/09/12/SupportingServices-RulesEngine/"/>
+
+
+
+
+
+  <title>SupportingServices - RulesEngine | One Corner of The Universe</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?85c1a54a1f488eb2ef338c4a476f37bc";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">One Corner of The Universe</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ahaedgar.github.io/2018/09/12/SupportingServices-RulesEngine/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Edgar">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="One Corner of The Universe">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SupportingServices - RulesEngine</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-12T18:59:25+08:00">
+                2018-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Edge-Computing/" itemprop="url" rel="index">
+                    <span itemprop="name">Edge Computing</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/09/12/SupportingServices-RulesEngine/" class="leancloud_visitors" data-flag-title="SupportingServices - RulesEngine">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,602
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>SupportingServices - RulesEngine：</p>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> Refrence Implementation</li>
+<li style="list-style: none"><input type="checkbox" checked> Rules Engine as Export Service Client</li>
+<li style="list-style: none"><input type="checkbox" checked> Rules Engine Direct Connect to Core Data</li>
+<li style="list-style: none"><input type="checkbox" checked> Rules Client and High Level Interaction Diagram</li>
+<li style="list-style: none"><input type="checkbox" checked> Rules (Defined), and Data Model</li>
+<li style="list-style: none"><input type="checkbox"> Rules Engine Configuration</li>
+<li style="list-style: none"><input type="checkbox"> Data Dictionary</li>
+</ul>
+<a id="more"></a>
+<p><img src="/2018/09/12/SupportingServices-RulesEngine/1.png" alt="1.png"></p>
+<h3 id="1-Refrence-Implementation"><a href="#1-Refrence-Implementation" class="headerlink" title="1. Refrence Implementation"></a>1. Refrence Implementation</h3><p>Rules Engine微服务提供了参考实现，边缘事件触发机制。Rules Engine服务能够监控传入的传感器或设备数据(监控数据是否处于目标范围内)，以及触发设备即时驱动。因此，Rules Engine在网络边缘处或附近提供“智能”，以获得更快的响应时间。</p>
+<p>该实现使用Drools（<a href="https://www.drools.org/" target="_blank" rel="noopener">https://www.drools.org/）</a>规则引擎作为核心。Drools是JBoss社区提供的开源规则引擎。这种微服务可以被第三方提供的许多其他边缘分析功能替换或扩充。</p>
+<h3 id="2-Rules-Engine-as-Export-Service-Client"><a href="#2-Rules-Engine-as-Export-Service-Client" class="headerlink" title="2. Rules Engine as Export Service Client"></a>2. Rules Engine as Export Service Client</h3><p>参考实现Rules Engine为一种自动导出服务客户端。当服务启动时，它会自动调用Export Client Registration microservice，将自身注册为来自Core Data的所有设备和传感器读书数据的客户端。作为Export Service客户端，参考实现rules engine通过Export Distribution微服务接收所有事件和数据。基于数据而言，参考实现rules engine监视通过Export Distribution微服务接收的每个事件和数据，并且rules engine 通过Core Command微服务触发对设备的动作（其随后通过Device Services 传送请求与实际设备通信）。</p>
+<p><img src="/2018/09/12/SupportingServices-RulesEngine/2.png" alt="2.png"></p>
+<h3 id="3-Rules-Engine-Direct-Connect-to-Core-Data"><a href="#3-Rules-Engine-Direct-Connect-to-Core-Data" class="headerlink" title="3. Rules Engine Direct Connect to Core Data"></a>3. Rules Engine Direct Connect to Core Data</h3><p>在对时间非常敏感的用例或环境中，连接的“对象”正在生成大量数据。因此，将Rules Engine微服务与Core Data的数据直接相连也是合适的。也就是说，不在通过Export Servies，直接调用Rule Engine Service。</p>
+<p><img src="/2018/09/12/SupportingServices-RulesEngine/3.png" alt="3.png"></p>
+<p>rules engine已针对此选项进行了编程。<label style="color:red">默认情况下，rules engine 微服务将自身注册为export service的客户端。</label>可以关闭此自动注册，并且规则引擎可以直接连接到Core Data的ZeroMQ发布数据。注意：由于Core Data中的ZeroMQ管道是一种发布 - 订阅机制，它允许多个订阅者。当规则引擎作为订阅者连接时，Core Data实际上同时发布给两个客户端或订阅者：Export Services和Rules Engine。为了将规则引擎与导出服务（作为客户端）断开连接并将其直接连接到Core Data，必须更改以下规则引擎微服务配置参数（在application.properties中找到）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export.client=true    # this is normally false by default and is the indication to the Rules Engine micro service to register itself with the Export Services</span><br><span class="line">export.zeromq.port=5563    # this port is set to 5566 when connecting to the ZeroMQ pipe out of Export Services.</span><br><span class="line">export.zeromq.host=tcp://[core data host]    # this is set to the export distro host when connecting to the ZeroMQ pipe out of Export Services</span><br></pre></td></tr></table></figure>
+<h3 id="4-Rules-Client-and-High-Level-Interaction-Diagram"><a href="#4-Rules-Client-and-High-Level-Interaction-Diagram" class="headerlink" title="4. Rules Client and High Level Interaction Diagram"></a>4. Rules Client and High Level Interaction Diagram</h3><p>Rules Engine微服务附带一个RESTful服务，可以添加和删除新规则。RESTful API允许将在JSON中定义的新规则动态添加到规则引擎（通过REST POST）。提供的JSON数据由微服务转换为Drools规则文件（.drl文件）。每个规则都必须与用于标识规则的唯一名称相关联，Drool文件包含此标识符。同时，也允许请求通过名称删除规则。</p>
+<label style="color:red">注意：由于Drools中的问题，删除的规则仅清空其内容。规则的名称（以及代表它的文件）仍在系统中。因此，在rule engine微服务停止并且物理删除空Drool文件之前，不能重用规则名称。</label>
+
+<p><img src="/2018/09/12/SupportingServices-RulesEngine/4.png" alt="4.png"></p>
+<h3 id="5-Rules-Defined-and-Data-Model"><a href="#5-Rules-Defined-and-Data-Model" class="headerlink" title="5. Rules (Defined), and Data Model"></a>5. Rules (Defined), and Data Model</h3><p>Rules Engine微服务直接通过REST API或间接使用客户端UI提供规则。</p>
+<p>规则由4部分定义：name，log entry，condition 和 action。</p>
+<p><img src="/2018/09/12/SupportingServices-RulesEngine/5.png" alt="5.png"></p>
+<ul>
+<li>name</li>
+</ul>
+<p>该名称唯一标识规则。</p>
+<ul>
+<li>log entry</li>
+</ul>
+<p>日志条目或简称日志是，在满足规则条件并触发操作时，发送到日志的文本。</p>
+<ul>
+<li>condition</li>
+</ul>
+<p>该条件指定要监控的数据（来自通过Export Services 提供的事件/数据）。具体而言，规则的条件元素指定要监视设备的设备ID或名称，并完成值检查（或简单地“检查”），即对该设备上收集的传感器值检验。设备ID或名称必须与Core Data 发送到Export Service 的Event对象中指定的设备ID或名称匹配，然后转发规则引擎服务（通过ZeroMQ）。</p>
+<p>值检查需指定监控传感器的参数，测试以应用于该参数。ValueCheck参数必须与CoreData提供的事件关联的读取名称之一匹配（并且也是合法的ValueDescriptor名称）。例如，在恒温器传感器上，Reading可能会报告当前温度。因此，读取名称将是“temperature”，并且为了规则，测试来自该传感器读数的数据，对同一设备的值检查也必须包含“温度”参数。operand1、operation和operand2必须在参数范围指定一个等式，以此决定是否触发行为。例如，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">parameter:  temperature</span><br><span class="line"></span><br><span class="line">operand1:  value</span><br><span class="line"></span><br><span class="line">operation:  &gt;</span><br><span class="line"></span><br><span class="line">operand2: 72</span><br></pre></td></tr></table></figure>
+<p>因为事件读取中的数据可以以字符串形式存在，ValueCheck operands 可以且应该使用Java语法指定，以创建用于比较的适当类型数据。如果温度读数在Core Data中表示为字符串，则相同的ValueCheck将指定如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">parameter:  temperature</span><br><span class="line"></span><br><span class="line">operand1:  Integer.parseInt(value)</span><br><span class="line"></span><br><span class="line">operation:  &gt;</span><br><span class="line"></span><br><span class="line">operand2: 72</span><br></pre></td></tr></table></figure>
+<p>最后，规则中的行为需指定: 在指定的设备或传感器上触发哪个命令，以及将哪些数据或参数发送到设备。实际调用是通过REST形式的Core Command微服务完成的。因此，该操作必须指定以下项：</p>
+<ul>
+<li>要调用的设备标识符(per Metadata)</li>
+<li>要对设备执行的命令标识符(per Metadata)</li>
+<li>将数据作为Command调用的一部分进行提供</li>
+</ul>
+<p>因此，作为调用的一部分提供的数据是要在Command POST调用的主体中提供的JSON数据。action属性的示例如下：</p>
+<p>device：56325f7ee4b05eaae5a89ce1（元数据中设备或传感器的标识符）</p>
+<p>command：56325f6de4b05eaae5a89cdc（每个元数据与设备关联的命令ID）</p>
+<p>body：{“value”：“3”}（REST消息体中提供的JSON数据）。</p>
+<p>在JSON中创建规则以通过规则引擎客户端提交POST时，整个规则将表示如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;name&quot;:&quot;motortoofastsignal&quot;, &quot;condition&quot;: &#123;&quot;device&quot;:&quot;562114e9e4b0385849b96cd8&quot;,&quot;checks&quot;:[ &#123;&quot;parameter&quot;:&quot;RPM&quot;, &quot;operand1&quot;:&quot;Integer.parseInt(value)&quot;, &quot;operation&quot;:&quot;&gt;&quot;,&quot;operand2&quot;:&quot;1200&quot; &#125; ] &#125;, &quot;action&quot; : &#123;&quot;device&quot;:&quot;56325f7ee4b05eaae5a89ce1&quot;,&quot;command&quot;:&quot;56325f6de4b05eaae5a89cdc&quot;,&quot;body&quot;:&quot;&#123;\\\&quot;value\\\&quot;:\\\&quot;3\\\&quot;&#125;&quot;&#125;,&quot;log&quot;:&quot;Patlite warning triggered for engine speed too high&quot; &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-Rules-Engine-Configuration"><a href="#6-Rules-Engine-Configuration" class="headerlink" title="6. Rules Engine Configuration"></a>6. Rules Engine Configuration</h3><p><a href="https://docs.edgexfoundry.org/Ch-RulesEngine.html" target="_blank" rel="noopener">SupportingServices-RulesEngine</a></p>
+<h3 id="7-Data-Dictionary"><a href="#7-Data-Dictionary" class="headerlink" title="7. Data Dictionary"></a>7. Data Dictionary</h3><p><img src="/2018/09/12/SupportingServices-RulesEngine/table-1.png" alt="table-1.png"></p>
+<blockquote>
+<p>参考文献<br><a href="https://docs.edgexfoundry.org/Ch-RulesEngine.html" target="_blank" rel="noopener">SupportingServices-RulesEngine</a></p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+
+    
+      <div>
+        
+<div style="text-align:center;color: #666666;font-size:14px;">
+------ 本文结束<i class="fa fa-paw"></i>感谢您的阅读 ------</div>
+
+
+      </div>
+    
+
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/EdgeX-Foundry/" rel="tag"><i class="fa fa-tag"></i> EdgeX Foundry</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/12/SupportingServices-Scheduling/" rel="next" title="SupportingServices - Scheduling">
+                <i class="fa fa-chevron-left"></i> SupportingServices - Scheduling
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/12/SupportingServices-Logging/" rel="prev" title="SupportingServices - Logging">
+                SupportingServices - Logging <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/touxiang.png"
+                alt="Edgar" />
+            
+              <p class="site-author-name" itemprop="name">Edgar</p>
+              <p class="site-description motion-element" itemprop="description">There's only one corner of the universe you can be sure of improving, and that's your own self.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Refrence-Implementation"><span class="nav-number">1.</span> <span class="nav-text">1. Refrence Implementation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Rules-Engine-as-Export-Service-Client"><span class="nav-number">2.</span> <span class="nav-text">2. Rules Engine as Export Service Client</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Rules-Engine-Direct-Connect-to-Core-Data"><span class="nav-number">3.</span> <span class="nav-text">3. Rules Engine Direct Connect to Core Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Rules-Client-and-High-Level-Interaction-Diagram"><span class="nav-number">4.</span> <span class="nav-text">4. Rules Client and High Level Interaction Diagram</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Rules-Defined-and-Data-Model"><span class="nav-number">5.</span> <span class="nav-text">5. Rules (Defined), and Data Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Rules-Engine-Configuration"><span class="nav-number">6.</span> <span class="nav-text">6. Rules Engine Configuration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-Data-Dictionary"><span class="nav-number">7.</span> <span class="nav-text">7. Data Dictionary</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Edgar</span>
+
+  
+</div>
+
+
+<!--  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div> -->
+
+
+
+  <!-- <span class="post-meta-divider">|</span> -->
+
+
+
+<!--  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div> -->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("MFSTFszEdzbq1fnpeMY01tHo-gzGzoHsz", "SzC1Qh0Yg6WLayRTx7UEwN1s");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
