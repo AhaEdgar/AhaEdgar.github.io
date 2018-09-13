@@ -4,6 +4,66 @@
 
     
   <url>
+    <loc>http://ahaedgar.github.io/2018/09/13/DeviceServices-VirtualDevice/</loc>
+    <lastmod>2018-09-13T10:31:39.453Z</lastmod>
+    <data>
+        <display>
+        <title>Device Services - Virtual Device</title>
+        <pubTime>2018-09-13T10:59:25.000Z</pubTime>
+        
+        <tag>EdgeX Foundry</tag>
+         
+         
+           
+             
+              <breadCrumb title="Edge Computing" url="http://ahaedgar.github.io/categories/Edge-Computing/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ahaedgar.github.io/2018/09/13/ExportServices-Distribution/</loc>
+    <lastmod>2018-09-13T10:31:39.016Z</lastmod>
+    <data>
+        <display>
+        <title>ExportServices - Distribution</title>
+        <pubTime>2018-09-13T10:59:25.000Z</pubTime>
+        
+        <tag>EdgeX Foundry</tag>
+         
+         
+           
+             
+              <breadCrumb title="Edge Computing" url="http://ahaedgar.github.io/categories/Edge-Computing/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ahaedgar.github.io/2018/09/13/ExportServices-ClientRegistration/</loc>
+    <lastmod>2018-09-13T10:31:39.016Z</lastmod>
+    <data>
+        <display>
+        <title>ExportServices - Client Registration</title>
+        <pubTime>2018-09-13T10:59:25.000Z</pubTime>
+        
+        <tag>EdgeX Foundry</tag>
+         
+         
+           
+             
+              <breadCrumb title="Edge Computing" url="http://ahaedgar.github.io/categories/Edge-Computing/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ahaedgar.github.io/2018/09/12/SupportingServices-AlertsAndNotifications/</loc>
     <lastmod>2018-09-12T11:19:17.027Z</lastmod>
     <data>
