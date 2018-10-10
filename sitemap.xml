@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ahaedgar.github.io/2018/10/10/Golang-ZeroMQ-PUBSUB/</loc>
+    
+    <lastmod>2018-10-10T13:39:57.544Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ahaedgar.github.io/2018/09/13/DeviceServices-VirtualDevice/</loc>
     
     <lastmod>2018-09-13T10:31:39.453Z</lastmod>
